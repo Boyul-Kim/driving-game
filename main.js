@@ -1,12 +1,15 @@
 var $body = document.querySelector('body');
-// var $container = document.querySelector('.container');
-// var $racecar = document.queryCommandEnabled('.racecar');
+var $racecar = document.querySelector('.racecar');
 
 function arrowKeys(event) {
-  // keyCode left: 37
-  // keyCode right: 39
-  // keyCode up: 38
-  // keyCode down: 40
-  // console.log(event.keyCode);
+  var direction = '';
+  if (event.keyCode === 38) {
+    direction = 'up';
+  } else if (event.keyCode === 37) {
+    direction = 'left';
+  } else if (event.keyCode === 40) {
+    direction = 'down';
+  }
+  $racecar.className = 'racecar rotate' + direction;
 }
 $body.addEventListener('keydown', arrowKeys);
