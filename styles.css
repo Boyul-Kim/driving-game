@@ -13,14 +13,14 @@ body {
   width: 10%;
 }
 
-.rotateup {
+.rotatenorth {
   transform: rotate(270deg);
 }
 
-.rotateleft {
+.rotatewest {
   transform: rotate(180deg);
 }
 
-.rotatedown {
+.rotatesouth {
   transform: rotate(90deg);
 }
