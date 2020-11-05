@@ -1,6 +1,6 @@
 body {
   background-color: rgb(77, 218, 67);
-  height: 100vh;
+  height: 90vh;
 }
 
 .container {
@@ -11,4 +11,16 @@ body {
 
 .racecar {
   width: 10%;
+}
+
+.rotatenorth {
+  transform: rotate(270deg);
+}
+
+.rotatewest {
+  transform: rotate(180deg);
+}
+
+.rotatesouth {
+  transform: rotate(90deg);
 }
