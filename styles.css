@@ -11,6 +11,7 @@ body {
 
 .racecar {
   width: 10%;
+  position: absolute;
 }
 
 .rotatenorth {
