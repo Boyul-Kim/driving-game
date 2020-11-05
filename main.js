@@ -1,8 +1,15 @@
 var $racecar = document.querySelector('.racecar');
 
 var car = {
-  direction: 'east'
+  direction: 'east',
+  location: {
+    x: 0,
+    y: 0
+  }
 };
+
+$racecar.style.left = car.location.x + 'px';
+$racecar.style.top = car.location.y + 'px';
 
 function arrowKeys(event) {
   if (event.keyCode === 38) {
