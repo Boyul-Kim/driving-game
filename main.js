@@ -11,7 +11,15 @@ var car = {
 $racecar.style.left = car.location.x + 'px';
 $racecar.style.top = car.location.y + 'px';
 
+var movementInterval = setInterval(movement, 16);
+clearInterval(movementInterval);
+
 function arrowKeys(event) {
+
+  if (event.keyCode === 32) {
+    movementInterval = setInterval(movement, 1.6);
+  }
+
   if (event.keyCode === 38) {
     car.direction = 'north';
   } else if (event.keyCode === 37) {
@@ -25,3 +33,8 @@ function arrowKeys(event) {
 }
 
 document.addEventListener('keydown', arrowKeys);
+
+function movement() {
+  car.location.x++;
+  $racecar.style.left = car.location.x + 'px';
+}
