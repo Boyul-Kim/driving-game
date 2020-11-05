@@ -11,13 +11,11 @@ var car = {
 $racecar.style.left = car.location.x + 'px';
 $racecar.style.top = car.location.y + 'px';
 
-var movementInterval = setInterval(movement, 16);
-clearInterval(movementInterval);
-
 function arrowKeys(event) {
 
   if (event.keyCode === 32) {
-    movementInterval = setInterval(movement, 1.6);
+    setInterval(movement, 1.6);
+    // var interval = setInterval(movement, 1.6); for next feature
   }
 
   if (event.keyCode === 38) {
