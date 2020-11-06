@@ -5,7 +5,9 @@ var car = {
   location: {
     x: 0,
     y: 0
-  }
+  },
+  movementInterval: null,
+  motion: false
 };
 
 $racecar.style.left = car.location.x + 'px';
@@ -14,8 +16,12 @@ $racecar.style.top = car.location.y + 'px';
 function arrowKeys(event) {
 
   if (event.keyCode === 32) {
-    setInterval(movement, 1.6);
-    // var interval = setInterval(movement, 1.6); for next feature
+    car.motion = !car.motion;
+    if (car.motion === true) {
+      car.movementInterval = setInterval(movement, 1.6);
+    } else if (car.motion === false) {
+      clearInterval(car.movementInterval);
+    }
   }
 
   if (event.keyCode === 38) {
