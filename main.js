@@ -39,6 +39,18 @@ function arrowKeys(event) {
 document.addEventListener('keydown', arrowKeys);
 
 function movement() {
-  car.location.x++;
-  $racecar.style.left = car.location.x + 'px';
+  if (car.direction === 'east') {
+    car.location.x++;
+    $racecar.style.left = car.location.x + 'px';
+  } else if (car.direction === 'west') {
+    car.location.x--;
+    $racecar.style.left = car.location.x + 'px';
+  } else if (car.direction === 'north') {
+    car.location.y--;
+    $racecar.style.top = car.location.y + 'px';
+  } else if (car.direction === 'south') {
+    car.location.y++;
+    $racecar.style.top = car.location.y + 'px';
+  }
+
 }
